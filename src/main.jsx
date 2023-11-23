@@ -15,10 +15,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
       },
-      // {
-      // 	path: "/jeu",
-      // 	element: <QuizFrame />,
-      // },
+      /*   {
+       	path: "/jeu",
+       	element: <QuizFrame />,
+       }, */
     ],
   },
   {

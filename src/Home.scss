@@ -1,0 +1,17 @@
+.house-container {
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .house-frame {
+    position: relative;
+    height: 200px;
+    width: 40vw;
+    height: 40vh;
+  }
+  .button-frame {
+    position: absolute;
+  }
+}
