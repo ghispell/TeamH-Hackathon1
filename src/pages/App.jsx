@@ -1,10 +1,7 @@
-
 import Home from "../components/Home";
 import backgroundVideo from "../assets/video_hackathon.mp4";
 
-
 function App() {
- 
   return (
     <div>
       <Home />
