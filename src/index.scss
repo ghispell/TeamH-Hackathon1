@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Twinkle+Star&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Twinkle+Star&display=swap");
 
 :root {
   --primary-color-opacity: rgba(237, 223, 217, 0.54);
@@ -17,23 +17,24 @@
 }
 
 .header {
-  height: 100vh;
+  height: 85vh;
 
   h1 {
     color: var(--primary-color);
     font-size: 11rem;
-    font-family: 'Twinkle Star', cursive;
+    font-family: "Twinkle Star", cursive;
   }
   h2 {
     color: var(--primary-color);
     margin: -50px;
     font-size: 4rem;
-    font-family: 'Twinkle Star', cursive;
+    font-family: "Twinkle Star", cursive;
   }
 }
 
 footer {
   text-align: center;
+  margin-top: 80px;
   padding: 1rem 0;
   height: 90px;
   background-color: var(--secondary-color);

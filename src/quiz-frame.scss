@@ -1,8 +1,36 @@
-.quiz-container{
-    height: 200px;
+.quiz-frame {
+  height: 85vh;
+  width: 100vw;
+  .quiz-container {
+    position: relative;
+    height: 35rem;
     background-image: url(./assets/house.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    width: 70vw;
-    height: 70vh;
+    background-size: 100%;
+    background-position: center;
+    width: 50rem;
+  }
+}
+
+.btn-list {
+  position: absolute;
+  bottom: 2rem;
+  flex-wrap: wrap;
+  width: 50rem;
+  justify-content: center;
+  row-gap: 30px;
+  column-gap: 325px;
+
+  .response-btn {
+    background-color: var(--primary-color-opacity);
+    border-radius: 10px;
+    width: 13rem;
+    height: 10rem;
+    padding: 30px;
+    &:hover,
+    &:focus {
+      box-shadow: 0 0.5em 0.5em -0.4em var(--green);
+      transform: translateY(-0.25em);
+    }
+  }
 }
