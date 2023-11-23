@@ -1,7 +1,5 @@
 import { useState, useEffect } from "react";
 import Bouton from "./Bouton";
-import { useEffect, useState } from "react";
-import BoutonList from "./BoutonList";
 import filmList from "../data/data.json";
 import "../quiz-frame.scss";
 import houseFrame from "../assets/house.png";
@@ -48,16 +46,12 @@ export default function QuizFrame() {
     return <p>Chargement</p>;
   }
   return (
-        <div className="quiz-frame flex justify-center items-center flex-col">
-
-    
-
-    <div className="quiz-frame flex justify-center items-center">
-       <div>
+    <div className="quiz-frame flex justify-center items-center flex-col">
+      <div>
         <p className="timer">{currentCount}</p>
       </div>
       <img src={filmchoisi.image} className="w-40" />
-       <div className="quiz-container">
+      <div className="quiz-container">
         <img src={houseFrame} alt="HOUSE" className="houseFrame" />
         {boutonlist.map((element) => (
           <button
