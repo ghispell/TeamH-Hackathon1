@@ -1,5 +1,4 @@
-{
-    "filmsNoel": [
+ [
       {
         "id": 1,
         "titre": "Maman, j'ai raté l'avion",
@@ -251,4 +250,3 @@
         "suggestions": ["Noël à Halloween Town", "Jack et les Cadeaux", "La Nuit des Citrouilles"]
       }
     ]
-  }
