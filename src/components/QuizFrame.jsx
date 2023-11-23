@@ -1,14 +1,17 @@
 import { useState, useEffect } from "react";
 import Bouton from "./Bouton";
+import { useEffect, useState } from "react";
 import BoutonList from "./BoutonList";
 import filmList from "../data/data.json";
 import "../quiz-frame.scss";
+import houseFrame from "../assets/house.png";
 
 export default function QuizFrame() {
   const [filmchoisi, setFilmchoisi] = useState(null);
   const [timerFin, setTimerFin] = useState(false);
   const [boutonlist, setBoutonlist] = useState([]);
   const [timer, setTimer] = useState(5);
+  const currentCount = timer < 10 ? `00:0${timer}` : `00:${timer}`;
   console.log(filmchoisi);
   function melangeTravelo(array) {
     return [...array].sort(() => Math.random() - 0.5);
@@ -45,11 +48,17 @@ export default function QuizFrame() {
     return <p>Chargement</p>;
   }
   return (
+        <div className="quiz-frame flex justify-center items-center flex-col">
+
+    
+
     <div className="quiz-frame flex justify-center items-center">
-      <p>{timer}</p>
+       <div>
+        <p className="timer">{currentCount}</p>
+      </div>
       <img src={filmchoisi.image} className="w-40" />
-      <div className="quiz-container flex justify-center items-center gap-2">
-        <img src="" alt="" />
+       <div className="quiz-container">
+        <img src={houseFrame} alt="HOUSE" className="houseFrame" />
         {boutonlist.map((element) => (
           <button
             className="border-2 border-black p-2"

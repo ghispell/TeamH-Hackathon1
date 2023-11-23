@@ -1,0 +1,33 @@
+.house-container {
+  margin-top: 10rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .house-frame {
+    position: relative;
+    height: 200px;
+    width: 40vw;
+    height: 40vh;
+  }
+  .button-frame {
+    position: absolute;
+    padding: 40px;
+    height: 200px;
+    width: 300px;
+    background: url(./assets/play_button.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin-top: 4rem;
+    .play-link {
+      margin: 0 auto;
+      .play {
+      }
+    }
+    &:hover {
+      transform: translateY(-0.25em);
+    }
+  }
+}
