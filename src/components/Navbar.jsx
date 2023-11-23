@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useRef } from "react";
-import volume from "../assets/icon_volume.png";
+import volumeOn from "../assets/volume-on.png";
+import volumeOff from "../assets/volume-off.png";
 import song from "../assets/ChristmasSong2.mp3";
 
 function Navbar() {
@@ -23,7 +24,7 @@ function Navbar() {
     <header className="flex flex-start">
       <img
         className={`volume m-3 ${playing ? "sound-up" : "sound-down"}`}
-        src={volume}
+        src={`${playing ? volumeOn : volumeOff}`}
         alt="logo"
         width={40}
         onClick={playing ? pause : play}

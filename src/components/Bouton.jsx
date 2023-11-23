@@ -1,7 +1,7 @@
 function Bouton({ film }) {
   return (
     <>
-      <button className="response-btn">{film.titre}</button>
+      <button className="response-btn transition">{film.titre}</button>
     </>
   );
 }

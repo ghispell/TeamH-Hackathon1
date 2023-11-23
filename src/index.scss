@@ -25,16 +25,14 @@
 }
 .sound-down {
   opacity: 0.3;
-  &hover {
+  &:hover {
     transform: translateY(-0.25em);
     opacity: 1;
   }
 }
 
 .header {
-
   height: 30vh;
-
 
   h1 {
     color: var(--primary-color);
@@ -51,7 +49,6 @@
 
 footer {
   text-align: center;
-  margin-top: 80px;
   padding: 1rem 0;
   height: 90px;
   background-color: var(--secondary-color);

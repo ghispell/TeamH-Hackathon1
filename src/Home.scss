@@ -13,5 +13,20 @@
   }
   .button-frame {
     position: absolute;
+    padding: 40px;
+    height: 200px;
+    width: 300px;
+    background: url(./assets/play_button.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    .play-link {
+      margin: 0 auto;
+      .play {
+      }
+    }
+    &:hover {
+      transform: translateY(-0.25em);
+    }
   }
 }

@@ -11,7 +11,6 @@ function Root() {
         <source src={backgroundVideo} type="video/mp4" />
       </video>
       <Outlet />
-      <Footer />
     </div>
   );
 }

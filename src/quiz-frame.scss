@@ -12,8 +12,6 @@
   }
   .quiz-container {
     position: relative;
-    height: 35rem;
-    width: 50rem;
     .houseFrame {
       height: 35rem;
       width: 50rem;
@@ -23,11 +21,11 @@
 
 .btn-list {
   position: absolute;
-  bottom: 2rem;
+  bottom: 2.3rem;
   flex-wrap: wrap;
   width: 50rem;
   justify-content: center;
-  row-gap: 30px;
+  row-gap: 40px;
   column-gap: 325px;
 
   .response-btn {
