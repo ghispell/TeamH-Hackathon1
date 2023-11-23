@@ -6,7 +6,6 @@ import QuizFrame from "./components/QuizFrame.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.scss";
 import Page404 from "./pages/Page404.jsx";
-import QuizFrame from "./components/QuizFrame.jsx";
 
 const router = createBrowserRouter([
   {
