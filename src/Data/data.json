@@ -1,0 +1,254 @@
+{
+    "filmsNoel": [
+      {
+        "id": 1,
+        "titre": "Maman, j'ai raté l'avion",
+        "année": 1990,
+        "réalisateur": "Chris Columbus",
+        "acteursPrincipaux": ["Macaulay Culkin", "Joe Pesci", "Daniel Stern"],
+        "image": "https://example.com/image/maman-jai-rate-lavion.jpg",
+        "synopsis": "Un jeune garçon est accidentellement laissé seul à la maison pendant les vacances de Noël.",
+        "suggestions": ["Vacances enneigées", "L'Incroyable Noël", "La Veillée de Noël"]
+      },
+      {
+        "id": 2,
+        "titre": "Le Grinch",
+        "année": 2000,
+        "réalisateur": "Ron Howard",
+        "acteursPrincipaux": ["Jim Carrey", "Taylor Momsen", "Jeffrey Tambor"],
+        "image": "https://example.com/image/le-grinch.jpg",
+        "synopsis": "Un être misanthrope et grincheux conspire pour ruiner le Noël du village de Whoville.",
+        "suggestions": ["Le Voleur de Noël", "Les Lumières de Noël", "La Magie du Grinch"]
+      },
+      {
+        "id": 3,
+        "titre": "Love Actually",
+        "année": 2003,
+        "réalisateur": "Richard Curtis",
+        "acteursPrincipaux": ["Hugh Grant", "Liam Neeson", "Colin Firth"],
+        "image": "https://example.com/image/love-actually.jpg",
+        "synopsis": "Plusieurs histoires d'amour s'entremêlent à Londres durant la période de Noël.",
+        "suggestions": ["Romance de Noël", "L'Amour en Hiver", "Les Contes de Noël"]
+      },
+      {
+        "id": 4,
+        "titre": "Le Pôle Express",
+        "année": 2004,
+        "réalisateur": "Robert Zemeckis",
+        "acteursPrincipaux": ["Tom Hanks"],
+        "image": "https://example.com/image/le-pole-express.jpg",
+        "synopsis": "Un jeune garçon embarque dans un train magique en route vers le Pôle Nord.",
+        "suggestions": ["Le Train Enchanté", "Voyage au Pays de Noël", "La Nuit Magique"]
+      },
+      {
+        "id": 5,
+        "titre": "Un Noël de folie",
+        "année": 2004,
+        "réalisateur": "Joe Roth",
+        "acteursPrincipaux": ["Tim Allen", "Jamie Lee Curtis", "Dan Aykroyd"],
+        "image": "https://example.com/image/un-noel-de-folie.jpg",
+        "synopsis": "Un couple décide de ne pas célébrer Noël, ce qui suscite l'indignation de leur entourage.",
+        "suggestions": ["Le Réveillon Chaotique", "Les Fous de Noël", "La Comédie des Fêtes"]
+      },
+      {
+        "id": 6,
+        "titre": "Elf",
+        "année": 2003,
+        "réalisateur": "Jon Favreau",
+        "acteursPrincipaux": ["Will Ferrell", "James Caan", "Zooey Deschanel"],
+        "image": "https://example.com/image/elf.jpg",
+        "synopsis": "Un homme élevé en tant qu'elfe au Pôle Nord part à New York à la recherche de ses origines.",
+        "suggestions": ["L'Elfe Farceur", "La Quête du Père Noël", "Le Lutin de Manhattan"]
+      },
+      {
+        "id": 7,
+        "titre": "Le Père Noël est une ordure",
+        "année": 1982,
+        "réalisateur": "Jean-Marie Poiré",
+        "acteursPrincipaux": ["Anémone", "Josiane Balasko", "Marie-Anne Chazel"],
+        "image": "https://example.com/image/le-pere-noel-est-une-ordure.jpg",
+        "synopsis": "Le soir de Noël, des personnages hauts en couleur se retrouvent coincés dans un appartement.",
+        "suggestions": ["Le Réveillon Gâché", "Les Cadeaux Empoisonnés", "La Soirée Catastrophe"]
+      },
+      {
+        "id": 8,
+        "titre": "Miracle sur la 34ème rue",
+        "année": 1994,
+        "réalisateur": "Les Mayfield",
+        "acteursPrincipaux": ["Richard Attenborough", "Elizabeth Perkins", "Mara Wilson"],
+        "image": "https://example.com/image/miracle-sur-la-34eme-rue.jpg",
+        "synopsis": "Un homme prétendant être le vrai Père Noël est mis en procès pour prouver son identité.",
+        "suggestions": ["Le Vrai Père Noël", "La Magie de la Ville", "Noël à New York"]
+      },
+      {
+        "id": 9,
+        "titre": "The Holiday",
+        "année": 2006,
+        "réalisateur": "Nancy Meyers",
+        "acteursPrincipaux": ["Cameron Diaz", "Kate Winslet", "Jude Law"],
+        "image": "https://example.com/image/the-holiday.jpg",
+        "synopsis": "Deux femmes échangent leurs maisons pour les vacances et trouvent l'amour inattendu.",
+        "suggestions": ["Échange de Noël", "Les Vacances de l'Amour", "Hiver Romantique"]
+      },
+      {
+        "id": 10,
+        "titre": "La Course au jouet",
+        "année": 1996,
+        "réalisateur": "Brian Levant",
+        "acteursPrincipaux": ["Arnold Schwarzenegger", "Sinbad", "Phil Hartman"],
+        "image": "https://example.com/image/la-course-au-jouet.jpg",
+        "synopsis": "Un père en quête désespérée d'un jouet populaire pour son fils le jour de Noël.",
+        "suggestions": ["Mission Jouet", "La Bataille des Cadeaux", "Chasse au Trésor de Noël"]
+      },
+      {
+        "id": 11,
+        "titre": "Le Drôle de Noël de Scrooge",
+        "année": 2009,
+        "réalisateur": "Robert Zemeckis",
+        "acteursPrincipaux": ["Jim Carrey", "Gary Oldman", "Colin Firth"],
+        "image": "https://example.com/image/le-drole-de-noel-de-scrooge.jpg",
+        "synopsis": "Une adaptation animée du conte classique de Charles Dickens sur l'avare Ebenezer Scrooge.",
+        "suggestions": ["Le Fantôme de Noël", "Les Trois Esprits", "La Nuit de Scrooge"]
+      },
+      {
+        "id": 12,
+        "titre": "Un Noël de princesse",
+        "année": 2011,
+        "réalisateur": "Michael Damian",
+        "acteursPrincipaux": ["Katie McGrath", "Roger Moore", "Sam Heughan"],
+        "image": "https://example.com/image/un-noel-de-princesse.jpg",
+        "synopsis": "Une jeune Américaine tombe amoureuse d'un prince pendant son séjour en Europe pour les vacances.",
+        "suggestions": ["Le Bal Royal", "Amour Couronné", "Le Prince de l'Hiver"]
+      },
+      {
+        "id": 13,
+        "titre": "Klaus",
+        "année": 2019,
+        "réalisateur": "Sergio Pablos",
+        "acteursPrincipaux": ["Jason Schwartzman", "J.K. Simmons", "Rashida Jones"],
+        "image": "https://example.com/image/klaus.jpg",
+        "synopsis": "Un facteur et un fabricant de jouets forment une amitié improbable et apportent la joie dans une ville froide.",
+        "suggestions": ["Le Facteur de Noël", "Les Jouets Perdus", "La Légende de Klaus"]
+      },
+      {
+        "id": 14,
+        "titre": "Noelle",
+        "année": 2019,
+        "réalisateur": "Marc Lawrence",
+        "acteursPrincipaux": ["Anna Kendrick", "Bill Hader", "Shirley MacLaine"],
+        "image": "https://example.com/image/noelle.jpg",
+        "synopsis": "La fille du Père Noël part à la recherche de son frère qui a disparu peu avant Noël.",
+        "suggestions": ["La Mission de Noelle", "Le Secret du Pôle Nord", "La Sauvetage du Père Noël"]
+      },
+      {
+        "id": 15,
+        "titre": "Le Noël de Mickey",
+        "année": 1983,
+        "réalisateur": "Burny Mattinson",
+        "acteursPrincipaux": ["Alan Young", "Wayne Allwine", "Hal Smith"],
+        "image": "https://example.com/image/le-noel-de-mickey.jpg",
+        "synopsis": "Mickey et ses amis racontent leurs propres versions de 'Un chant de Noël'.",
+        "suggestions": ["Le Conte de Mickey", "La Magie Disney de Noël", "Mickey et le Fantôme"]
+      },
+      {
+        "id": 16,
+        "titre": "Le Noël Shrektaculaire de l'Âne",
+        "année": 2010,
+        "réalisateur": "Gary Trousdale",
+        "acteursPrincipaux": ["Eddie Murphy", "Mike Myers", "Cameron Diaz"],
+        "image": "https://example.com/image/le-noel-shrektaculaire-de-lane.jpg",
+        "synopsis": "L'Âne de Shrek raconte des histoires drôles et festives pour célébrer Noël.",
+        "suggestions": ["Shrek et la Surprise de Noël", "L'Hiver à Far Far Away", "Les Aventures de l'Âne"]
+      },
+      {
+        "id": 17,
+        "titre": "Le Noël enchanté",
+        "année": 1997,
+        "réalisateur": "Andy Knight",
+        "acteursPrincipaux": ["Tim Curry", "Whoopi Goldberg", "Michael York"],
+        "image": "https://example.com/image/le-noel-enchante.jpg",
+        "synopsis": "Une jeune fille découvre un monde magique grâce à un casse-noisette enchanté.",
+        "suggestions": ["La Nuit des Jouets", "La Danse des Flocons", "Le Casse-Noisette Magique"]
+      },
+      {
+        "id": 18,
+        "titre": "La Belle et la Bête : Un Noël enchanté",
+        "année": 1997,
+        "réalisateur": "Andrew Knight",
+        "acteursPrincipaux": ["Paige O'Hara", "Robby Benson", "Jerry Orbach"],
+        "image": "https://example.com/image/la-belle-et-la-bete-un-noel-enchante.jpg",
+        "synopsis": "Belle prépare Noël au château malgré l'interdiction de la Bête.",
+        "suggestions": ["Le Noël de la Rose", "La Fête Enchantée", "L'Hiver de la Bête"]
+      },
+      {
+        "id": 19,
+        "titre": "Les Chroniques de Noël",
+        "année": 2018,
+        "réalisateur": "Clay Kaytis",
+        "acteursPrincipaux": ["Kurt Russell", "Darby Camp", "Judah Lewis"],
+        "image": "https://example.com/image/les-chroniques-de-noel.jpg",
+        "synopsis": "Deux enfants s'embarquent dans une aventure pour sauver Noël après avoir accidentellement fait écraser le traîneau du Père Noël.",
+        "suggestions": ["Le Sauvetage du Père Noël", "L'Aventure Polaire", "La Nuit des Miracles"]
+      },
+      {
+        "id": 20,
+        "titre": "Le Sapin a les boules",
+        "année": 1989,
+        "réalisateur": "Jeremiah S. Chechik",
+        "acteursPrincipaux": ["Chevy Chase", "Beverly D'Angelo", "Randy Quaid"],
+        "image": "https://example.com/image/le-sapin-a-les-boules.jpg",
+        "synopsis": "Clark Griswold veut créer le Noël parfait, mais tout ne se passe pas comme prévu.",
+        "suggestions": ["Noël Catastrophe", "Les Vacances de Noël", "La Famille Griswold"]
+      },
+      {
+        "id": 21,
+        "titre": "Le Journal de Bridget Jones",
+        "année": 2001,
+        "réalisateur": "Sharon Maguire",
+        "acteursPrincipaux": ["Renée Zellweger", "Colin Firth", "Hugh Grant"],
+        "image": "https://example.com/image/le-journal-de-bridget-jones.jpg",
+        "synopsis": "Les tribulations romantiques et professionnelles d'une trentenaire londonienne.",
+        "suggestions": ["Amour et Quiproquos", "Les Fêtes de Bridget", "Célibataire à Noël"]
+      },
+      {
+        "id": 22,
+        "titre": "Le Bonhomme de neige",
+        "année": 1982,
+        "réalisateur": "Dianne Jackson",
+        "acteursPrincipaux": ["David Bowie", "Raymond Briggs"],
+        "image": "https://example.com/image/le-bonhomme-de-neige.jpg",
+        "synopsis": "Un enfant construit un bonhomme de neige qui prend vie et l'emmène dans une aventure magique.",
+        "suggestions": ["La Nuit du Bonhomme de Neige", "Le Vol Hivernal", "Magie sur la Neige"]
+      },
+      {
+        "id": 23,
+        "titre": "Un chant de Noël",
+        "année": 1951,
+        "réalisateur": "Brian Desmond Hurst",
+        "acteursPrincipaux": ["Alastair Sim", "Jack Warner", "Kathleen Harrison"],
+        "image": "https://example.com/image/un-chant-de-noel.jpg",
+        "synopsis": "La classique histoire de Charles Dickens sur la rédemption d'Ebenezer Scrooge.",
+        "suggestions": ["Les Fantômes du Passé", "La Nuit de Scrooge", "Le Réveil de Noël"]
+      },
+      {
+        "id": 24,
+        "titre": "Joyeux Noël",
+        "année": 2005,
+        "réalisateur": "Christian Carion",
+        "acteursPrincipaux": ["Diane Kruger", "Benno Fürmann", "Guillaume Canet"],
+        "image": "https://example.com/image/joyeux-noel.jpg",
+        "synopsis": "Durant la Première Guerre mondiale, une trêve est déclarée entre les troupes ennemies pour Noël.",
+        "suggestions": ["La Paix de Noël", "Trêve Hivernale", "Noël dans les Tranchées"]
+      },
+      {
+        "id": 25,
+        "titre": "L'Étrange Noël de monsieur Jack",
+        "année": 1993,
+        "réalisateur": "Henry Selick",
+        "acteursPrincipaux": ["Danny Elfman", "Chris Sarandon", "Catherine O'Hara"],
+        "image": "https://example.com/image/letrange-noel-de-monsieur-jack.jpg",
+        "synopsis": "Le roi de la ville d'Halloween découvre la ville de Noël et décide de créer sa propre version de la fête.",
+        "suggestions": ["Noël à Halloween Town", "Jack et les Cadeaux", "La Nuit des Citrouilles"]
+      }
+    ]
+  }
