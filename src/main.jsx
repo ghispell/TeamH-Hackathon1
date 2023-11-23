@@ -16,8 +16,8 @@ const router = createBrowserRouter([
         element: <App />,
       },
       // {
-      // 	path: "your path",
-      // 	element: <Your components />,
+      // 	path: "/jeu",
+      // 	element: <QuizFrame />,
       // },
     ],
   },
