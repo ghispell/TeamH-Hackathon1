@@ -1,27 +1,15 @@
 import { Link } from "react-router-dom";
 
 function Navbar() {
-  const navigations = [
-    {
-      id: 1,
-      href: "/",
-      name: "Accueil",
-    },
-    {
-      id: 2,
-      href: "#",
-      name: "Lorem ipsum",
-    },
-    {
-      id: 3,
-      href: "/contact",
-      name: "Contact",
-    },
-  ];
-
   return (
-    <header className="flex justify-around	">
-      <img src="../../public/icon_volume.png" alt="logo" />
+    <header className="flex flex-start">
+      <img
+        id="volume"
+        src="../../public/icon_volume.png"
+        className="m-3"
+        alt="logo"
+        width={40}
+      />
     </header>
   );
 }

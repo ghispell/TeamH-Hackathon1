@@ -1,9 +1,11 @@
+import Home from "../components/Home";
+
 function App() {
-	return (
-		<div>
-			<p>Template SACOD</p>
-		</div>
-	);
+  return (
+    <>
+      <Home />
+    </>
+  );
 }
 
 export default App;
