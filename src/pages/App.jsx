@@ -5,7 +5,7 @@ function App() {
   const [timer, setTimer] = useState(30);
   console.log(filmsNoel);
 
-  useEffect(() => {
+  /*  useEffect(() => {
     const chrono = setTimeout(() => {
       if (timer > 0) {
         setTimer((prev) => {
@@ -17,7 +17,7 @@ function App() {
     }, 1000);
 
     return () => clearTimeout(chrono);
-  }, [timer]);
+  }, [timer]); */
   return (
     <div>
       <p>Template SACOD</p>
