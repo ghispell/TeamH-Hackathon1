@@ -1,14 +1,23 @@
 .quiz-frame {
   height: 85vh;
   width: 100vw;
+  gap: 10px;
+  .timer {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--primary-color);
+  }
   .quiz-container {
     position: relative;
     height: 35rem;
-    background-image: url(./assets/house.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
     width: 50rem;
+    .houseFrame {
+      height: 35rem;
+      width: 50rem;
+    }
   }
 }
 

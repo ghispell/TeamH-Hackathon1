@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import volume from "../assets/icon_volume.png";
 
 function Navbar() {
   return (
     <header className="flex flex-start">
       <img
-        id="volume"
+        className={`volume m-3 ${playing ? "sound-up" : "sound-down"}`}
         src={volume}
-        className="m-3"
         alt="logo"
         width={40}
       />
