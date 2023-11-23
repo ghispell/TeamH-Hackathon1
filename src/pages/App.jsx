@@ -1,5 +1,7 @@
+
 import { useState, useEffect } from "react";
 import filmsNoel from "../Data/data.json";
+import Home from "../components/Home";
 
 function App() {
   const [timer, setTimer] = useState(30);
@@ -20,6 +22,7 @@ function App() {
   }, [timer]); */
   return (
     <div>
+      <Home />
       <p>Template SACOD</p>
     </div>
   );
