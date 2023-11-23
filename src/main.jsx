@@ -5,6 +5,7 @@ import Root from "./layout/Root.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.scss";
 import Page404 from "./pages/Page404.jsx";
+import QuizFrame from "./components/QuizFrame.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,10 +16,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <App />,
       },
-      /*   {
-       	path: "/jeu",
-       	element: <QuizFrame />,
-       }, */
+      {
+        path: "/jeu",
+        element: <QuizFrame />,
+      },
     ],
   },
   {
