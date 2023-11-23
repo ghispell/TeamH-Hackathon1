@@ -8,7 +8,7 @@ export default function QuizFrame() {
   const [filmchoisi, setFilmchoisi] = useState(null);
   const [timerFin, setTimerFin] = useState(false);
   const [boutonlist, setBoutonlist] = useState([]);
-  const [timer, setTimer] = useState(5);
+  const [timer, setTimer] = useState(30);
   const currentCount = timer < 10 ? `00:0${timer}` : `00:${timer}`;
   console.log(filmchoisi);
   function melangeTravelo(array) {
@@ -24,7 +24,7 @@ export default function QuizFrame() {
     );
     if (timer === 0) {
       setTimerFin(false);
-      setTimer(5);
+      setTimer(30);
     }
   }, [timerFin]);
   /* setBoutonlist((prevBoutonlist) => {
@@ -50,18 +50,14 @@ export default function QuizFrame() {
       <div>
         <p className="timer">{currentCount}</p>
       </div>
-      <img src={filmchoisi.image} className="w-40" />
       <div className="quiz-container">
+        <img src={filmchoisi.image} className=" movie-img" />
         <img src={houseFrame} alt="HOUSE" className="houseFrame" />
-        {boutonlist.map((element) => (
-          <button
-            className="border-2 border-black p-2"
-            key={element}
-            type="button"
-          >
-            {element}
-          </button>
-        ))}
+        <div className="btn-list flex">
+          {boutonlist.map((element) => (
+            <Bouton key={element} titre={element} />
+          ))}
+        </div>
       </div>
     </div>
   );

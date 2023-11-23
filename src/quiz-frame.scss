@@ -9,12 +9,24 @@
     border-radius: 10px;
     text-align: center;
     color: var(--primary-color);
+    z-index: 2;
+    box-shadow: -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
+      5px 5px 10px 0px rgba(0, 0, 0, 0.3);
   }
   .quiz-container {
     position: relative;
     .houseFrame {
       height: 35rem;
       width: 50rem;
+    }
+    .movie-img {
+      position: absolute;
+      bottom: 1rem;
+      left: 35%;
+      width: 15rem;
+      height: 22rem;
+      box-shadow: -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
+        5px 5px 10px 0px rgba(0, 0, 0, 0.3);
     }
   }
 }
@@ -34,6 +46,8 @@
     width: 13rem;
     height: 10rem;
     padding: 30px;
+    color: var(--green);
+    font-weight: 600;
     &:hover,
     &:focus {
       box-shadow: 0 0.5em 0.5em -0.4em var(--green);
