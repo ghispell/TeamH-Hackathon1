@@ -11,7 +11,7 @@ export default function QuizFrame() {
   const [timer, setTimer] = useState(5);
   console.log(filmchoisi);
   function melangeTravelo(array) {
-    return array.sort(() => Math.random() - 0.5);
+    return [...array].sort(() => Math.random() - 0.5);
   }
 
   useEffect(() => {
@@ -41,11 +41,15 @@ export default function QuizFrame() {
       setTimerFin(true);
     }
   }, [timer]);
-
+  if (!filmchoisi) {
+    return <p>Chargement</p>;
+  }
   return (
     <div className="quiz-frame flex justify-center items-center">
       <p>{timer}</p>
+      <img src={filmchoisi.image} className="w-40" />
       <div className="quiz-container flex justify-center items-center gap-2">
+        <img src="" alt="" />
         {boutonlist.map((element) => (
           <button
             className="border-2 border-black p-2"
