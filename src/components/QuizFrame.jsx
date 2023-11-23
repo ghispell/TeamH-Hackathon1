@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Bouton from "./Bouton";
-import BoutonList from "./BoutonList";
 import filmList from "../data/data.json";
 import "../quiz-frame.scss";
 
@@ -8,8 +7,9 @@ export default function QuizFrame() {
   const [filmchoisi, setFilmchoisi] = useState(null);
   const [timerFin, setTimerFin] = useState(false);
   const [boutonlist, setBoutonlist] = useState([]);
-  const [timer, setTimer] = useState(5);
-  console.log(filmchoisi);
+  const [timer, setTimer] = useState(30);
+  const [hasClicked, setHasClicked] = useState(false);
+  const [score, setScore] = useState(0);
   function melangeTravelo(array) {
     return [...array].sort(() => Math.random() - 0.5);
   }
@@ -23,14 +23,11 @@ export default function QuizFrame() {
     );
     if (timer === 0) {
       setTimerFin(false);
-      setTimer(5);
+      setTimer(30);
+      setHasClicked(false);
     }
   }, [timerFin]);
-  /* setBoutonlist((prevBoutonlist) => {
-          const newBoutonlist = [...prevBoutonlist];
-          newBoutonlist[indexFilmChoisi] = filmchoisi.titre;
-          return newBoutonlist;
-        }); -DarkPierre*/
+
   useEffect(() => {
     if (timer > 0) {
       const chrono = setTimeout(() => {
@@ -45,19 +42,22 @@ export default function QuizFrame() {
     return <p>Chargement</p>;
   }
   return (
-    <div className="quiz-frame flex justify-center items-center">
+    <div className="quiz-frame flex gap-4 justify-center items-center">
       <p>{timer}</p>
-      <img src={filmchoisi.image} className="w-40" />
+      <p>Score : {score}</p>
+      <img src={filmchoisi.image} className="w-40 animate-blur" />
       <div className="quiz-container flex justify-center items-center gap-2">
-        <img src="" alt="" />
         {boutonlist.map((element) => (
-          <button
-            className="border-2 border-black p-2"
+          <Bouton
             key={element}
-            type="button"
-          >
-            {element}
-          </button>
+            titre={element}
+            filmchoisi={filmchoisi.titre}
+            setTimer={setTimer}
+            hasClicked={hasClicked}
+            setHasClicked={setHasClicked}
+            timer={timer}
+            setScore={setScore}
+          />
         ))}
       </div>
     </div>

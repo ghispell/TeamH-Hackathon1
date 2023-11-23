@@ -1,6 +1,5 @@
 import Home from "../components/Home";
 import backgroundVideo from "../assets/video_hackathon.mp4";
-import BoutonList from "../components/BoutonList";
 import QuizFrame from "../components/QuizFrame";
 function App() {
   return (
