@@ -21,10 +21,10 @@
     }
     .movie-img {
       position: absolute;
-      bottom: 1rem;
+      bottom: 3.5rem;
       left: 35%;
       width: 15rem;
-      height: 22rem;
+      height: 22.5rem;
       box-shadow: -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
         5px 5px 10px 0px rgba(0, 0, 0, 0.3);
     }
@@ -33,25 +33,43 @@
 
 .btn-list {
   position: absolute;
-  bottom: 2.3rem;
+  bottom: 3.5rem;
   flex-wrap: wrap;
   width: 50rem;
   justify-content: center;
   row-gap: 40px;
-  column-gap: 325px;
+  column-gap: 240px;
 
   .response-btn {
-    background-color: var(--primary-color-opacity);
+    background-image: url(./assets/window.png);
+    background-size: 95%;
+    background-repeat: no-repeat;
+    background-position: center;
     border-radius: 10px;
-    width: 13rem;
+    width: 15.9rem;
     height: 10rem;
     padding: 30px;
     color: var(--green);
     font-weight: 600;
+
     &:hover,
     &:focus {
-      box-shadow: 0 0.5em 0.5em -0.4em var(--green);
       transform: translateY(-0.25em);
     }
+    p {
+      width: 7rem;
+      text-wrap: wrap;
+      text-align: center;
+      margin: 0 auto;
+    }
   }
+}
+.privacy-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--green);
+  z-index: 2;
 }

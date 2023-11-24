@@ -10,7 +10,7 @@ export default function QuizFrame() {
   const [boutonlist, setBoutonlist] = useState([]);
   const [timer, setTimer] = useState(30);
   const currentCount = timer < 10 ? `00:0${timer}` : `00:${timer}`;
-  console.log(filmchoisi);
+
   function melangeTravelo(array) {
     return [...array].sort(() => Math.random() - 0.5);
   }
@@ -27,11 +27,7 @@ export default function QuizFrame() {
       setTimer(30);
     }
   }, [timerFin]);
-  /* setBoutonlist((prevBoutonlist) => {
-          const newBoutonlist = [...prevBoutonlist];
-          newBoutonlist[indexFilmChoisi] = filmchoisi.titre;
-          return newBoutonlist;
-        }); -DarkPierre*/
+
   useEffect(() => {
     if (timer > 0) {
       const chrono = setTimeout(() => {
@@ -51,7 +47,7 @@ export default function QuizFrame() {
         <p className="timer">{currentCount}</p>
       </div>
       <div className="quiz-container">
-        <img src={filmchoisi.image} className=" movie-img" />
+        <img src={filmchoisi.image} className="w-50 h-80 movie-img" />
         <img src={houseFrame} alt="HOUSE" className="houseFrame" />
         <div className="btn-list flex">
           {boutonlist.map((element) => (

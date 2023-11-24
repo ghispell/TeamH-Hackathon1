@@ -4,6 +4,7 @@ import App from "./pages/App.jsx";
 import Root from "./layout/Root.jsx";
 import QuizFrame from "./components/QuizFrame.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import "./index.scss";
 import Page404 from "./pages/Page404.jsx";
 
@@ -29,5 +30,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router} />
+  <AnimatePresence mode="wait" initial={false}>
+    <RouterProvider router={router} />
+  </AnimatePresence>
 );
