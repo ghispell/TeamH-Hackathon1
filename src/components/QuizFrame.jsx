@@ -4,7 +4,6 @@ import filmList from "../data/data.json";
 import AnimatedPage from "./AnimatedPage";
 import "../quiz-frame.scss";
 import houseFrame from "../assets/house.png";
-/* import path from "../assets/path.png"; */
 
 import Santa from "./Santa.jsx";
 
@@ -64,7 +63,7 @@ export default function QuizFrame() {
     <AnimatedPage>
       <div className="quiz-frame flex justify-center items-center flex-col">
         <div className="quiz-container">
-          {timer <= 25 && <Santa response={filmchoisi} />}
+          {timer <= 25 && timer >= 10 && <Santa response={filmchoisi} />}
           {nbQuestion > 10 || <p className="timer ">{currentCount}</p>}
           {nbQuestion > 10 || (
             <p className="score items-center justify-center flex">
@@ -77,7 +76,14 @@ export default function QuizFrame() {
                 Fin de la partie, votre score est de : <br />
                 <br /> {score}
               </p>
-              <p className="text-3x">Rejouer?</p>
+              <div className="flex justify-center">
+                <button
+                  onClick={() => window.location.reload()}
+                  className="text-3xl border p-2 rounded-md bg-gray-400"
+                >
+                  Rejouer?
+                </button>
+              </div>
               <img src={houseFrame} alt="HOUSE" className="houseFrame" />
             </>
           ) : (
