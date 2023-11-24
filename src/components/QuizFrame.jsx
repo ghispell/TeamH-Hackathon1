@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Bouton from "./Bouton";
-import filmList from "../data/data.json";
+import filmList from "../Data/data.json";
 import AnimatedPage from "./AnimatedPage";
 import "../quiz-frame.scss";
 import houseFrame from "../assets/house.png";
