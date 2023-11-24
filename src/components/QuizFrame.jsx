@@ -3,6 +3,7 @@ import Bouton from "./Bouton";
 import filmList from "../data/data.json";
 import "../quiz-frame.scss";
 import houseFrame from "../assets/house.png";
+import Santa from "./Santa.jsx";
 
 export default function QuizFrame() {
   const [filmchoisi, setFilmchoisi] = useState(null);
