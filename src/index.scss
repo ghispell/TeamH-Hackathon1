@@ -36,6 +36,9 @@ body {
 
 .header {
   height: 30vh;
+  @media screen and (min-width: 1900px) {
+    height: 50vh;
+  }
 
   h1 {
     color: var(--primary-color);

@@ -1,20 +1,30 @@
 import { useState, useEffect } from "react";
 import Bouton from "./Bouton";
 import filmList from "../data/data.json";
+import AnimatedPage from "./AnimatedPage";
 import "../quiz-frame.scss";
 import houseFrame from "../assets/house.png";
+/* import path from "../assets/path.png"; */
+
 import Santa from "./Santa.jsx";
 
 export default function QuizFrame() {
   const [filmchoisi, setFilmchoisi] = useState(null);
   const [timerFin, setTimerFin] = useState(false);
   const [boutonlist, setBoutonlist] = useState([]);
-  const [timer, setTimer] = useState(30);
-  const currentCount = timer < 10 ? `00:0${timer}` : `00:${timer}`;
+  const [timer, setTimer] = useState(5);
+  const currentCount = timer < 10 ? `00 : 0${timer}` : `00 : ${timer}`;
+
+  const [hasClicked, setHasClicked] = useState(false);
+  const [score, setScore] = useState(0);
+
+  const [nbQuestion, setNbQuestion] = useState(0);
 
   function melangeTravelo(array) {
     return [...array].sort(() => Math.random() - 0.5);
   }
+
+  const [blur, setBlur] = useState("animate-blur");
 
   useEffect(() => {
     const indexRandom = Math.floor(Math.random() * filmList.length);
@@ -24,43 +34,78 @@ export default function QuizFrame() {
       melangeTravelo([nouveauFilm.titre, ...nouveauFilm.suggestions])
     );
     if (timer === 0) {
+      setBlur("animate-blur");
+      setNbQuestion((prev) => prev + 1);
       setTimerFin(false);
-      setTimer(30);
+      setTimer(5);
+      setHasClicked(false);
     }
   }, [timerFin]);
 
+  /*  useEffect(() => {
+    if()
+  }, [nbQuestion]); */
   useEffect(() => {
     if (timer > 0) {
+      setBlur("animate-blur");
       const chrono = setTimeout(() => {
         setTimer((prev) => prev - 1);
       }, 1000);
       return () => clearTimeout(chrono);
     } else {
       setTimerFin(true);
+      setBlur(null);
     }
   }, [timer]);
   if (!filmchoisi) {
     return <p>Chargement</p>;
   }
   return (
-    <div className="quiz-frame flex justify-center items-center flex-col">
-      <div>
-        <p className="timer">{currentCount}</p>
-      </div>
-      <div className="quiz-container">
-
-        {timer <= 20 && <Santa response={filmchoisi} />}
-
-
-        <img src={filmchoisi.image} className="w-50 h-80 movie-img" />
-
-        <img src={houseFrame} alt="HOUSE" className="houseFrame" />
-        <div className="btn-list flex">
-          {boutonlist.map((element) => (
-            <Bouton key={element} titre={element} />
-          ))}
+    <AnimatedPage>
+      <div className="quiz-frame flex justify-center items-center flex-col">
+        <div className="quiz-container">
+          {timer <= 28 && <Santa response={filmchoisi} />}
+          {nbQuestion > 1 || <p className="timer ">{currentCount}</p>}
+          {nbQuestion > 1 || (
+            <p className="score items-center justify-center flex">
+              Score : {score}
+            </p>
+          )}
+          {nbQuestion > 1 ? (
+            <>
+              <p className="finish flex justify-center">
+                Fin de la partie, votre score est de : <br />
+                <br /> {score}
+              </p>
+              <img src={houseFrame} alt="HOUSE" className="houseFrame" />
+            </>
+          ) : (
+            <>
+              <p className="nb-question">Question {nbQuestion} /10</p>
+              <img src={filmchoisi.image} className={`movie-img ${blur}`} />
+              <img src={houseFrame} alt="HOUSE" className="houseFrame" />
+              <div className="btn-list flex">
+                {boutonlist.map((element) => (
+                  <Bouton
+                    key={element}
+                    titre={element}
+                    filmchoisi={filmchoisi.titre}
+                    setTimer={setTimer}
+                    hasClicked={hasClicked}
+                    setHasClicked={setHasClicked}
+                    timer={timer}
+                    setScore={setScore}
+                    setBlur={setBlur}
+                  />
+                ))}
+              </div>
+            </>
+          )}
         </div>
+        {/* <div>
+          <img src={path} alt="" className="path" />
+        </div>  */}
       </div>
-    </div>
+    </AnimatedPage>
   );
 }
