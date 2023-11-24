@@ -1,16 +1,20 @@
 import Home from "../components/Home";
+import AnimatedPage from "../components/AnimatedPage";
 import backgroundVideo from "../assets/video_hackathon.mp4";
-import QuizFrame from "../components/QuizFrame";
+import { Link } from "react-router-dom";
 function App() {
   return (
-    <div>
-      <Home />
-      <video autoPlay muted loop id="myVideo">
-        <source src={backgroundVideo} type="video/mp4" />
-      </video>
-      <p>{timer}</p>
-      <p>Template SACOD</p>
-    </div>
+    <AnimatedPage>
+      <div>
+        <Home />
+        <video autoPlay muted loop id="myVideo">
+          <source src={backgroundVideo} type="video/mp4" />
+        </video>
+        <Link to="/jeu">
+          <p className="text-white">Play</p>
+        </Link>
+      </div>
+    </AnimatedPage>
   );
 }
 
