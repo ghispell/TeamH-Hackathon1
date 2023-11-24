@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import volumeOn from "../assets/volume-on.png";
 import volumeOff from "../assets/volume-off.png";
 import song from "../assets/ChristmasSong2.mp3";
+import logo from "../assets/logo.png";
 
 function Navbar() {
   const [playing, setPlaying] = useState(false);
@@ -20,9 +21,12 @@ function Navbar() {
     audioRef.current.pause();
   }
   return (
-    <header className="flex flex-start">
+    <header className="flex justify-between">
+      <img src={logo} className="h-32" />
       <img
-        className={`volume m-3 ${playing ? "sound-up" : "sound-down"}`}
+        className={`volume m-3 ${
+          playing ? "sound-up" : "sound-down"
+        } h-14 w-14`}
         src={`${playing ? volumeOn : volumeOff}`}
         alt="logo"
         width={40}
