@@ -11,7 +11,6 @@ export default function QuizFrame() {
   const [boutonlist, setBoutonlist] = useState([]);
   const [timer, setTimer] = useState(30);
   const currentCount = timer < 10 ? `00:0${timer}` : `00:${timer}`;
-  console.log(filmchoisi);
   function melangeTravelo(array) {
     return [...array].sort(() => Math.random() - 0.5);
   }
@@ -52,6 +51,7 @@ export default function QuizFrame() {
         <p className="timer">{currentCount}</p>
       </div>
       <div className="quiz-container">
+        {timer <= 20 && <Santa response={filmchoisi} />}
 
         <img src={filmchoisi.image} className=" movie-img" />
         <img src={houseFrame} alt="HOUSE" className="houseFrame" />
