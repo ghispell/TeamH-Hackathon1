@@ -12,7 +12,7 @@ export default function QuizFrame() {
   const [filmchoisi, setFilmchoisi] = useState(null);
   const [timerFin, setTimerFin] = useState(false);
   const [boutonlist, setBoutonlist] = useState([]);
-  const [timer, setTimer] = useState(5);
+  const [timer, setTimer] = useState(30);
   const currentCount = timer < 10 ? `00 : 0${timer}` : `00 : ${timer}`;
 
   const [hasClicked, setHasClicked] = useState(false);
@@ -37,7 +37,7 @@ export default function QuizFrame() {
       setBlur("animate-blur");
       setNbQuestion((prev) => prev + 1);
       setTimerFin(false);
-      setTimer(5);
+      setTimer(30);
       setHasClicked(false);
     }
   }, [timerFin]);
@@ -64,19 +64,20 @@ export default function QuizFrame() {
     <AnimatedPage>
       <div className="quiz-frame flex justify-center items-center flex-col">
         <div className="quiz-container">
-          {timer <= 28 && <Santa response={filmchoisi} />}
-          {nbQuestion > 1 || <p className="timer ">{currentCount}</p>}
-          {nbQuestion > 1 || (
+          {timer <= 25 && <Santa response={filmchoisi} />}
+          {nbQuestion > 10 || <p className="timer ">{currentCount}</p>}
+          {nbQuestion > 10 || (
             <p className="score items-center justify-center flex">
               Score : {score}
             </p>
           )}
-          {nbQuestion > 1 ? (
+          {nbQuestion > 10 ? (
             <>
               <p className="finish flex justify-center">
                 Fin de la partie, votre score est de : <br />
                 <br /> {score}
               </p>
+              <p className="text-3x">Rejouer?</p>
               <img src={houseFrame} alt="HOUSE" className="houseFrame" />
             </>
           ) : (
