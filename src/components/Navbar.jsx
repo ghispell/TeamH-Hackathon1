@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import volumeOn from "../assets/volume-on.png";
 import volumeOff from "../assets/volume-off.png";
 import song from "../assets/ChristmasSong2.mp3";
@@ -22,7 +23,9 @@ function Navbar() {
   }
   return (
     <header className="flex justify-between">
-      <img src={logo} className="h-32" />
+      <Link to="/">
+        <img src={logo} className="h-32" />
+      </Link>
       <img
         className={`volume m-3 ${
           playing ? "sound-up" : "sound-down"
