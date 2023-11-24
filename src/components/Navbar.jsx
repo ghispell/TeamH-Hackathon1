@@ -24,7 +24,7 @@ function Navbar() {
   return (
     <header className="flex justify-between">
       <Link to="/">
-        <img src={logo} className="h-32" />
+        <img src={logo} className="h-20 m-3" />
       </Link>
       <img
         className={`volume m-3 ${

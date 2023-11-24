@@ -76,14 +76,14 @@ export default function QuizFrame() {
                 Fin de la partie, votre score est de : <br />
                 <br /> {score}
               </p>
-              <div className="flex justify-center">
-                <button
-                  onClick={() => window.location.reload()}
-                  className="text-3xl border p-2 rounded-md bg-gray-400"
-                >
-                  Rejouer?
-                </button>
-              </div>
+
+              <button
+                onClick={() => window.location.reload()}
+                className="restart transition"
+              >
+                Rejouer?
+              </button>
+
               <img src={houseFrame} alt="HOUSE" className="houseFrame" />
             </>
           ) : (
