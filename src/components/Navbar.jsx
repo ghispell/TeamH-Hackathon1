@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState, useRef } from "react";
 import volumeOn from "../assets/volume-on.png";
 import volumeOff from "../assets/volume-off.png";
