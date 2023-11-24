@@ -35,9 +35,12 @@
     max-width: 97.5%;
     width: 97.5%;
     text-wrap: wrap;
+
     filter: drop-shadow(0 0 0.75rem crimson);
+    position: absolute;
+    bottom: 10rem;
+    font-size: 2rem;
     @media screen and (min-width: 1900px) {
-      position: absolute;
       bottom: 18rem;
       left: 1%;
       font-size: 3rem;
@@ -147,7 +150,6 @@
       background-position: center;
       border-radius: 10px;
       width: 12.5rem;
-
       height: 10rem;
       padding: 30px;
       color: var(--green);
@@ -166,7 +168,11 @@
         text-wrap: wrap;
         text-align: center;
         margin: 0 auto;
-        margin-right: 33px !important;
+        margin-right: 9px !important;
+        @media screen and (min-width: 1900px) {
+          margin: 0 auto;
+          margin-right: 33px !important;
+        }
       }
     }
     .right {
