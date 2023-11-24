@@ -8,25 +8,30 @@ function Bouton({
   setHasClicked,
   setScore,
   timer,
+  setBlur,
 }) {
   const [estLeBonFilm, setEstLeBonFilm] = useState("");
   const handleClick = () => {
     if (titre === filmchoisi) {
-      setEstLeBonFilm(() => "good");
+      setEstLeBonFilm(() => "right");
     } else {
-      setEstLeBonFilm(() => "bad");
+      setEstLeBonFilm(() => "wrong");
     }
   };
+  if (hasClicked === true) {
+    setBlur(null);
+  }
+
   return (
     <>
       <button
         disabled={hasClicked}
         className={`response-btn  ${estLeBonFilm} ${
-          hasClicked && titre === filmchoisi && "good"
+          hasClicked && titre === filmchoisi && "right"
         }`}
         onClick={() => {
           handleClick();
-          setScore((prev) => (titre === filmchoisi ? prev + timer : prev));
+          setScore((prev) => (titre === filmchoisi ? prev + 1 : prev));
           setTimer(() => 2);
           setHasClicked(() => true);
         }}

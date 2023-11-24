@@ -2,19 +2,47 @@
   height: 80vh;
   width: 100vw;
   gap: 10px;
-  .timer {
-    background-color: var(--secondary-color);
+  .score {
+    background-image: url(./assets/inpute.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 110%;
     padding: 10px;
-    width: 150px;
-    border-radius: 10px;
+    height: 130px;
+    position: absolute;
+    top: -1.09rem;
+    left: 6.5rem;
+    transform: rotate(deg);
+    width: 135px;
     text-align: center;
     color: var(--primary-color);
-    z-index: 2;
-    box-shadow: -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
-      5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    font-weight: 700;
   }
   .quiz-container {
     position: relative;
+    .timer {
+      background-color: var(--secondary-color);
+      border-radius: 30px;
+      padding: 10px;
+      position: absolute;
+      top: 2.5rem;
+      left: 42%;
+      width: 135px;
+      text-align: center;
+      color: var(--primary-color);
+      z-index: 1;
+      box-shadow: -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
+        5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+    }
+    .nb-question {
+      position: absolute;
+      left: 42.8%;
+      z-index: 1;
+      top: 6rem;
+      color: var(--secondary-color);
+      font-weight: 700;
+    }
     .houseFrame {
       height: 35rem;
       width: 50rem;
@@ -64,10 +92,10 @@
       margin: 0 auto;
     }
   }
-  .good {
+  .right {
     background-image: url(./assets/goodAnswer.png);
   }
-  .bad {
+  .wrong {
     background-image: url(./assets/badAnswer.png);
   }
 }
@@ -95,5 +123,5 @@
   }
 }
 .animate-blur {
-  animation: blur-animation 30s ease-out forwards;
+  animation: blur-animation 45s ease-out forwards;
 }

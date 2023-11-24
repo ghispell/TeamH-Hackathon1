@@ -11,24 +11,31 @@ export default function QuizFrame() {
   const [timerFin, setTimerFin] = useState(false);
   const [boutonlist, setBoutonlist] = useState([]);
   const [timer, setTimer] = useState(30);
-  const currentCount = timer < 10 ? `00:0${timer}` : `00:${timer}`;
+  const currentCount = timer < 10 ? `00 : 0${timer}` : `00 : ${timer}`;
 
   const [hasClicked, setHasClicked] = useState(false);
   const [score, setScore] = useState(0);
+
+  const [nbQuestion, setNbQuestion] = useState(0);
+
   function melangeTravelo(array) {
     return [...array].sort(() => Math.random() - 0.5);
   }
+
+  const [blur, setBlur] = useState("animate-blur");
 
   useEffect(() => {
     const indexRandom = Math.floor(Math.random() * filmList.length);
     const nouveauFilm = filmList[indexRandom];
     setFilmchoisi(nouveauFilm);
+    setNbQuestion((prev) => prev + 1);
     setBoutonlist(
       melangeTravelo([nouveauFilm.titre, ...nouveauFilm.suggestions])
     );
     if (timer === 0) {
       setTimerFin(false);
       setTimer(30);
+      setBlur("animate-blur");
       setHasClicked(false);
     }
   }, [timerFin]);
@@ -41,20 +48,25 @@ export default function QuizFrame() {
       return () => clearTimeout(chrono);
     } else {
       setTimerFin(true);
+      setBlur(null);
     }
   }, [timer]);
   if (!filmchoisi) {
     return <p>Chargement</p>;
   }
+
   return (
     <AnimatedPage>
       <div className="quiz-frame flex justify-center items-center flex-col">
-        <p className="timer">{currentCount}</p>
-        <p>Score : {score}</p>
         <div className="quiz-container">
+          <p className="timer ">{currentCount}</p>
+          <p className="score items-center justify-center flex">
+            Score : {score}/10
+          </p>
+          <p className="nb-question">Question {nbQuestion} /10</p>
           <img
             src={filmchoisi.image}
-            className="w-50 h-80 movie-img animate-blur"
+            className={`w-50 h-80 movie-img ${blur}`}
           />
           <img src={houseFrame} alt="HOUSE" className="houseFrame" />
           <div className="btn-list flex">
@@ -68,6 +80,7 @@ export default function QuizFrame() {
                 setHasClicked={setHasClicked}
                 timer={timer}
                 setScore={setScore}
+                setBlur={setBlur}
               />
             ))}
           </div>
