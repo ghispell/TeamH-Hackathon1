@@ -46,6 +46,24 @@
       font-size: 3rem;
     }
   }
+  .restart {
+    position: absolute;
+    bottom: 9rem;
+    left: 44%;
+    background-color: var(--secondary-color);
+    padding: 13px;
+    width: 8rem;
+    border-radius: 10px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    box-shadow: -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
+      5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+    &:hover {
+      background-color: var(--secondary-color);
+      opacity: 80%;
+      transform: translateY(-0.25em);
+    }
+  }
   .quiz-container {
     position: relative;
     .timer {
