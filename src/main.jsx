@@ -30,7 +30,7 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <AnimatePresence mode="wait" initial={false}>
+  <AnimatePresence>
     <RouterProvider router={router} />
   </AnimatePresence>
 );
