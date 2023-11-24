@@ -48,7 +48,12 @@ export default function QuizFrame() {
         <p className="timer">{currentCount}</p>
       </div>
       <div className="quiz-container">
+
+        {timer <= 20 && <Santa response={filmchoisi} />}
+
+
         <img src={filmchoisi.image} className="w-50 h-80 movie-img" />
+
         <img src={houseFrame} alt="HOUSE" className="houseFrame" />
         <div className="btn-list flex">
           {boutonlist.map((element) => (

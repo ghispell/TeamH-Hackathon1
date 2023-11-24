@@ -28,8 +28,29 @@
       box-shadow: -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
         5px 5px 10px 0px rgba(0, 0, 0, 0.3);
     }
+    .santa {
+      z-index: 3;
+      position: absolute;
+      top: -100px;
+    }
+    .flag {
+      top: 40px;
+    }
+    .synopsis {
+      max-width: 450px;
+      height: 72px;
+      position: absolute;
+      bottom: 70px;
+      left: 200px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      color: white;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
   }
-}
+
 
 .btn-list {
   position: absolute;
@@ -55,6 +76,7 @@
     &:hover,
     &:focus {
       transform: translateY(-0.25em);
+
     }
     p {
       width: 7rem;
